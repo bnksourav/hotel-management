@@ -1,0 +1,57 @@
+package com.sourav.Hotel.Management.services;
+
+import java.util.List;
+
+import com.sourav.Hotel.Management.Dao.*;
+
+import com.sourav.Hotel.Management.modal.UserInfoDo;
+
+import org.springframework.beans.factory.annotation.*;
+import org.springframework.stereotype.*;
+
+
+@Service
+public class UserService {
+	
+	@Autowired
+	private DAOUser DAOUser;
+	
+	
+	 public List<UserInfoDo> getUserDetail(){
+		 
+		 List<UserInfoDo> Alluser=DAOUser.getUserDetail();
+			System.out.println("getAllUserDetail cService");
+		 
+		 return Alluser;
+		 
+	 }
+	 public List<UserInfoDo> getUserDetailById(String ID){
+		 
+		List<UserInfoDo OneUser =DAOUser.getUserDetailById(ID);
+		 
+		 System.out.println(ID+" Services Get user by ID"); 
+		 return OneUser;
+		 
+	 }
+	 public UserInfoDo  addNewUser(UserInfoDo newuser) {
+		 UserInfoDo addUser =DAOUser.addNewUser(newuser);
+		 
+		 System.out.println("Add new  user by ID"); 
+		 return addUser;
+		 
+	 }
+	 public UserInfoDo  updateUserInfo(UserInfoDo updateuser) {
+		 
+		 UserInfoDo updateUser =DAOUser.updateUserInfo(updateuser);
+		 System.out.println("Add new  user by ID"); 
+		 return updateUser;
+		 
+	 }
+	 public UserInfoDo deleteUserID(long ID) {
+		 UserInfoDo deleteUser =DAOUser.deleteUserID(ID);
+		 return deleteUser ;
+	 }
+	
+	
+
+}

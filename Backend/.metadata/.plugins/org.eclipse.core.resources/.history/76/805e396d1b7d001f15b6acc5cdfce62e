@@ -1,0 +1,9 @@
+package com.sourav.Hotel.Management.entity;
+
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+@Entity
+@Table(name="User_Info")
+public class UserInfo {
+
+}

@@ -1,0 +1,5 @@
+package com.sourav.Hotel.Management.repository;
+
+public class UserRepository extends CrudRepository<UserInfoDo, Long> {
+
+}

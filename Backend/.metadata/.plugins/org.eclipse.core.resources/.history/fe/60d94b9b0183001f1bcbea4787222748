@@ -1,0 +1,74 @@
+package com.sourav.Hotel.Management.Dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.sourav.Hotel.Management.modal.UserInfoDo;
+import com.sourav.Hotel.Management.repository.*;
+
+@Repository 
+public class DAOUser {
+	
+	@Autowired
+	private UserRepository UserRepository;
+//	@Autowired
+//	private ManualQuery ManualQuery;
+
+
+	public List<UserInfoDo> getUserDetail() {
+		
+			
+		System.out.println("getAllUserDetail cService");
+		return UserRepository.findAll();
+	}
+	
+	public List<UserInfoDo> getUserDetailById(String ID){
+		 
+		 System.out.println(ID+" DAO Get user by ID"); 
+		 
+		 long i=Long.parseLong(ID);
+		//
+		 return UserRepository.findByUserid(i); 
+		 
+	}
+	public UserInfoDo  addNewUser(UserInfoDo newuser) {
+		 
+		
+		 System.out.println("DAO Add new  user by ID"); 
+		 return UserRepository.save(newuser);
+		 
+	}
+	public UserInfoDo  updateUserInfo(UserInfoDo updateuser) {
+		
+		
+		 System.out.println("update  user by ID"); 
+		 return null;
+		 
+	}
+	public List<UserInfoDo> deleteUserID(long ID) {
+		
+		 System.out.println("Deleteby Called for  user ID"); 
+		//;
+//		 String s="Delete from hotelmanaement.User_Info wwher userid="+"'"+ID+"' ;";
+//		 ManualQuery.query(s);	
+		 if(UserRepository.existsByUserid(ID)) {
+			 System.out.println(ID+ " ID exist exist"); 
+			 deleteByUserid(ID);
+		 }else {
+			 System.out.println("id not exist"); 
+		 }
+		 		  
+		 
+		 return null; 
+				 //UserRepository.deleteByUserid(ID);
+	}
+	//@Transactional
+	 public void deleteByUserid(long userId) {
+		UserRepository.deleteAll(UserRepository.findByUserid(userId));
+	    }
+
+}

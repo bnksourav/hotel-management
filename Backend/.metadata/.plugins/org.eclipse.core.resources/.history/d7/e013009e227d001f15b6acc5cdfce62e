@@ -1,0 +1,16 @@
+package com.sourav.Hotel.Management.repository;
+
+import java.util.List;
+
+import org.springframework.data.repository.*;
+import org.springframework.stereotype.Repository;
+
+import com.sourav.Hotel.Management.modal.UserInfoDo;
+
+
+@Repository
+public interface UserRepository extends CrudRepository<UserInfoDo, Long> {
+
+	List<UserInfoDo> findAll();
+	//UserInfoDo findById(int ID);
+}

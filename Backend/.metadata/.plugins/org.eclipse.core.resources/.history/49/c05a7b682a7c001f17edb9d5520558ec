@@ -1,0 +1,5 @@
+package com.sourav.Hotel.Management.modal;
+
+public class UserInfoDo {
+
+}

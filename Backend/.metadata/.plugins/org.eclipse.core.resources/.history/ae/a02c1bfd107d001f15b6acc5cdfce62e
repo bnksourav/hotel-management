@@ -1,0 +1,17 @@
+package com.sourav.Hotel.Management.Dao;
+
+import java.util.List;
+
+import com.sourav.Hotel.Management.modal.UserInfoDo;
+
+public class DAOUser {
+	
+	
+
+
+public List<UserInfoDo> getUserDetail() {
+
+	return null;
+}
+
+}

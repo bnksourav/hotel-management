@@ -1,0 +1,32 @@
+package com.sourav.Hotel.Management.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.*;
+import org.springframework.data.repository.query.Param;
+
+import com.sourav.Hotel.Management.modal.UserInfoDo;
+
+
+public interface UserRepository extends CrudRepository<UserInfoDo, Integer> {
+
+
+
+	List<UserInfoDo> findAll();
+	
+	
+	//@Query("SELECT .* FROM UserInfoDo u WHERE u.userid = :userId")
+	//List<UserInfoDo> findByUserid(Integer userId);
+	
+	
+	//@query(Insert into user_info (addhar_no,dob,name,sex,user_id) values (u.))
+	UserInfoDo save(UserInfoDo u);
+
+
+	//UserInfoDo findByUserid(int i);
+	
+	
+	// void deleteByUserId(int ID);
+	
+}

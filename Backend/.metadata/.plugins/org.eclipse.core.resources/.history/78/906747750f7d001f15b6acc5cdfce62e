@@ -1,0 +1,41 @@
+package com.sourav.Hotel.Management.services;
+
+import java.util.List;
+
+import com.sourav.Hotel.Management.Dao.*;
+
+import com.sourav.Hotel.Management.modal.UserInfoDo;
+
+
+@Services
+public class Service {
+	
+	private DAOUser DAOUser;
+	
+	
+	 public List<UserInfoDo> getUserDetail(){
+		 
+		 List<UserInfoDo> Alluser=DAOUser.getUserDetail();
+		 return Alluser;
+		 
+	 }
+	 public List<UserInfoDo> getUserDetailById(){
+		 
+		 System.out.println("Get user by ID"); 
+		 return null;
+		 
+	 }
+	 public Void addNewUser() {
+		 System.out.println("Add new  user by ID"); 
+		 return null;
+		 
+	 }
+	 public Void updateUserInfo() {
+		 System.out.println("Add new  user by ID"); 
+		 return null;
+		 
+	 }
+	
+	
+
+}

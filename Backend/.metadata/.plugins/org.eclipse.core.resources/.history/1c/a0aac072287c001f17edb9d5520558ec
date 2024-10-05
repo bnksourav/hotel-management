@@ -1,0 +1,17 @@
+package com.sourav.Hotel.Management.controller;
+
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+public class UserInfo {
+	
+	@GetMapping("/")
+	public int UserDetail() {
+		
+		return 5;
+	}
+	
+	
+	
+
+}

@@ -1,0 +1,54 @@
+package com.sourav.Hotel.Management.modal;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table (name="User_Info")
+public class UserInfoDo {
+	
+	
+	@Id
+	@Column(name ='User_ID')
+	private long UserID;
+	private String Name;
+	private String Addhar_no;
+	private char sex;
+	private String DoB;
+	
+	
+	public long getUserID() {
+		return UserID;
+	}
+	public void setUser_ID(int user_ID) {
+		UserID = user_ID;
+	}
+	public String getName() {
+		return Name;
+	}
+	public void setName(String name) {
+		Name = name;
+	}
+	public String getAddhar_no() {
+		return Addhar_no;
+	}
+	public void setAddhar_no(String addhar_no) {
+		Addhar_no = addhar_no;
+	}
+	public char getSex() {
+		return sex;
+	}
+	public void setSex(char sex) {
+		this.sex = sex;
+	}
+	public String getDoB() {
+		return DoB;
+	}
+	public void setDoB(String doB) {
+		DoB = doB;
+	}
+	
+
+}

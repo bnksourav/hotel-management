@@ -1,0 +1,38 @@
+package com.sourav.Hotel.Management.controller;
+
+import org.springframework.web.bind.annotation.*;
+import
+
+@RestController
+public class UserInfo {
+	
+	@GetMapping("/")
+	public List<UserInfoDo> UserDetail() {
+		List<UserInfoDo> userInfo = new List<>;
+		
+		return null;
+	}
+	
+	@PostMapping("/newUser")
+	public void NewUser() {
+		
+		System.out.print(" Thanks for regestretion ");
+		
+	}
+	
+	@PostMapping("/upadateUser")
+	public  updateUserInfo() {
+		
+		System.out.print(" Thanks for regestretion");
+		
+	}
+	
+	@PostMapping("/DeleteUser")
+	public void DeleteUserInfo() {
+		
+		System.out.print(" Thanks for regestretion ");
+		
+	}
+		
+
+}

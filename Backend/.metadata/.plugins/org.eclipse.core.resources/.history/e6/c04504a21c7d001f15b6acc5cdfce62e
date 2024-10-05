@@ -1,0 +1,19 @@
+package com.sourav.Hotel.Management.entity;
+
+import jakarta.persistence.*;
+import jakarta.persistence.Id;
+
+
+@Entity
+@Table (name="User_Info")
+public class UserInfoEntity {
+	
+	@Id
+	@Column
+	private int User_ID;
+	private String Name;
+	private String Addhar_no;
+	private char sex;
+	private String DoB;
+
+}

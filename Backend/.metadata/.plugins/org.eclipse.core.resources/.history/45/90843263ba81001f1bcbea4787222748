@@ -1,0 +1,12 @@
+package com.sourav.Hotel.Management.repository;
+
+import org.hibernate.type.descriptor.jdbc.JdbcType;
+
+import com.sourav.Hotel.Management.modal.UserInfoDo;
+
+public interface  ManualQuery extends  JdbcTemplate {
+
+	void query(String s);
+	
+
+}

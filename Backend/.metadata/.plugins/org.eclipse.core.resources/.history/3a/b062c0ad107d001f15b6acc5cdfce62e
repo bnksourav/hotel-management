@@ -1,0 +1,5 @@
+package com.sourav.Hotel.Management.Dao;
+
+public class DAOUser {
+
+}
